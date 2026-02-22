@@ -1,0 +1,13 @@
+name: test
+on:
+  push:
+    branches: [ "deploy" ]
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, docker]
+
+    steps:
+      - name: task
+        run: |
+          echo "trabajando duro"
