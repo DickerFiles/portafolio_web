@@ -1,11 +1,11 @@
-name: test
+name: deploy
 on:
   push:
     branches: [ "deploy" ]
 
 jobs:
   deploy:
-    runs-on: [self-hosted, docker]
+    runs-on: self-hosted
 
     steps:
       - name: task
