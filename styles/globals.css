@@ -1,6 +1,23 @@
+/* ============================
+   IMPORTACIÓN DE FUENTES
+   ============================ */
+
+/* Importa la fuente Syne desde Google Fonts
+   Disponible en pesos de 400 a 800 */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+/* Importa la fuente DM Sans
+   Disponible en pesos de 400 y 500 */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+
+/* ============================
+   VARIABLES GLOBALES
+   ============================ */
+
+/* :root representa el elemento <html>.
+   Aquí definimos variables CSS globales
+   que pueden reutilizarse en todo el proyecto. */
 
 :root {
     --bg:      #0d1117;   /* Color de fondo principal */
@@ -13,6 +30,14 @@
     --accent2: #f78166;   /* Color de acento secundario (naranja) */
 }
 
+
+/* ============================
+   RESET BÁSICO DE ESTILOS
+   ============================ */
+
+/* Eliminamos márgenes, padding y usamos
+   border-box para mayor control del layout */
+
 *,
 *::before,
 *::after {
@@ -21,21 +46,47 @@
     padding: 0;
 }
 
+
+/* ============================
+   ESTILOS BASE DEL BODY
+   ============================ */
+
+/* El body apila en columna: navbar → main → footer.
+   align-items: stretch asegura que cada bloque
+   ocupe el ancho completo de la pantalla. */
+
 body {
     background: var(--bg);
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;   /* apila: navbar → main → footer */
+    align-items: stretch;     /* cada bloque ocupa todo el ancho */
     font-family: 'DM Sans', sans-serif;
     color: var(--text);
-    padding: 2rem;
 }
+
+/* main ocupa el espacio sobrante (sticky footer).
+   La .card se centra con margin: 0 auto desde styles.css. */
+
+main {
+    flex-grow: 1;             /* empuja el footer hacia abajo */
+    padding: 2rem 1rem;
+}
+
+
+/* ============================
+   ESTILOS PARA ENLACES
+   ============================ */
+
+/* Aplicamos color usando variable CSS
+   y quitamos el subrayado por defecto */
 
 a {
     color: var(--accent);
     text-decoration: none;
 }
+
+/* Estado hover para mejorar la experiencia del usuario */
 
 a:hover {
     color: #58a6ff;
