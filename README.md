@@ -1,1 +1,1 @@
-<p> Disponible en <a href="https://google.com" target="_blanck">https://erwbyel.org</a> </p>
+<p> Disponible en <a href="https://erwbyel.org">https://erwbyel.org</a> </p>
