@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+    --bg:      #0d1117;   /* Color de fondo principal */
+    --card:    #161b22;   /* Fondo de tarjeta primaria */
+    --card2:   #1c2333;   /* Fondo de tarjeta secundaria */
+    --border:  #30363d;   /* Color de bordes */
+    --text:    #e6edf3;   /* Color principal del texto */
+    --muted:   #8b949e;   /* Color de texto secundario / apagado */
+    --accent:  #2f81f7;   /* Color de acento principal (azul) */
+    --accent2: #f78166;   /* Color de acento secundario (naranja) */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    padding: 2rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #58a6ff;
+}
