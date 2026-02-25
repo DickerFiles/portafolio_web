@@ -13,7 +13,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t nginx-portfolio:latest .
+          docker build -t nginx-portafolio:latest .
 
       - name: Clean up old images
         run: |
@@ -21,5 +21,5 @@ jobs:
 
       - name: Restart container
         run: |
-          cd /srv/docker/stacks/apps/porfafolio_web
+          cd /srv/docker/stacks/apps/portafolio_web
           docker compose up -d --force-recreate
