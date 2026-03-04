@@ -1,7 +1,7 @@
 name: Deploy
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
@@ -22,4 +22,5 @@ jobs:
       - name: Restart container
         run: |
           cd /srv/docker/stacks/apps/portafolio_web
-          docker compose up -d --force-recreate
+          docker compose down
+          docker compose up -d --pull never
