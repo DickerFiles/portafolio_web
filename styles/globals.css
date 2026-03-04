@@ -1,93 +1,54 @@
-/* ============================
-   IMPORTACIÓN DE FUENTES
-   ============================ */
-
-/* Importa la fuente Syne desde Google Fonts
-   Disponible en pesos de 400 a 800 */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
-/* Importa la fuente DM Sans
-   Disponible en pesos de 400 y 500 */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
-
-/* ============================
-   VARIABLES GLOBALES
-   ============================ */
-
-/* :root representa el elemento <html>.
-   Aquí definimos variables CSS globales
-   que pueden reutilizarse en todo el proyecto. */
-
 :root {
-    --bg:      #0d1117;   /* Color de fondo principal */
-    --card:    #161b22;   /* Fondo de tarjeta primaria */
-    --card2:   #1c2333;   /* Fondo de tarjeta secundaria */
-    --border:  #30363d;   /* Color de bordes */
-    --text:    #e6edf3;   /* Color principal del texto */
-    --muted:   #8b949e;   /* Color de texto secundario / apagado */
-    --accent:  #2f81f7;   /* Color de acento principal (azul) */
-    --accent2: #f78166;   /* Color de acento secundario (naranja) */
+   --bg: #060211;
+   /* Color de fondo principal */
+   --card: #0b031a;
+   /* Fondo de tarjeta primaria */
+   --card2: #1c2333;
+   /* Fondo de tarjeta secundaria */
+   --border: #7e67ac;
+   /* Color de bordes */
+   --text: #e6edf3;
+   /* Color principal del texto */
+   --muted: #8b949e;
+   /* Color de texto secundario / apagado */
+   --accent: #9b048a;
+   /* Color de acento principal (azul) */
+   --accent2: #300e1d;
+   /* Color de acento secundario (naranja) */
 }
-
-
-/* ============================
-   RESET BÁSICO DE ESTILOS
-   ============================ */
-
-/* Eliminamos márgenes, padding y usamos
-   border-box para mayor control del layout */
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
-
-
-/* ============================
-   ESTILOS BASE DEL BODY
-   ============================ */
-
-/* El body apila en columna: navbar → main → footer.
-   align-items: stretch asegura que cada bloque
-   ocupe el ancho completo de la pantalla. */
 
 body {
-    background: var(--bg);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;   /* apila: navbar → main → footer */
-    align-items: stretch;     /* cada bloque ocupa todo el ancho */
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
+   background: var(--bg);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   font-family: 'DM Sans', sans-serif;
+   color: var(--text);
 }
-
-/* main ocupa el espacio sobrante (sticky footer).
-   La .card se centra con margin: 0 auto desde styles.css. */
 
 main {
-    flex-grow: 1;             /* empuja el footer hacia abajo */
-    padding: 2rem 1rem;
+   flex-grow: 1;
+   padding: 2rem 1rem;
 }
-
-
-/* ============================
-   ESTILOS PARA ENLACES
-   ============================ */
-
-/* Aplicamos color usando variable CSS
-   y quitamos el subrayado por defecto */
 
 a {
-    color: var(--accent);
-    text-decoration: none;
+   color: var(--accent);
+   text-decoration: none;
 }
 
-/* Estado hover para mejorar la experiencia del usuario */
-
 a:hover {
-    color: #58a6ff;
+   color: #e6d2d8;
 }

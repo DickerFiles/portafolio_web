@@ -1,37 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Skills — erwbyel</title>
+    <link rel="stylesheet" type="text/css" href="../styles/globals.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Angel Erubiel Flores Jimenez</h1>
-        <p>Ingeniero en Software | estudiante | Java and Devops</p>
-
-        <!-- menu de navegacion principal -->
-        <nav></nav>
-    </header>
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../index.html" class="nav-logo">erwbyel</a>
+        <ul class="nav-links" role="list">
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="./skills.html" class="nav-link active">Skills</a></li>
+            <li><a href="./experience.html" class="nav-link">Experience</a></li>
+            <li><a href="./proyects.html" class="nav-link">Projects</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1>Este es la pagina de habilidades</h1>
+        <div class="card">
+
+            <section class="bio" aria-label="Skills intro">
+                <h2>Habilidades Técnicas</h2>
+                <p>
+                    Estas son las tecnologías con las que trabajo actualmente.
+                    Siempre estoy aprendiendo algo nuevo.
+                </p>
+            </section>
+
+            <!-- LENGUAJES -->
+            <section class="expertise" aria-label="Lenguajes">
+                <header class="section-header">
+                    <h3>Lenguajes</h3>
+                    <span class="tag">Languages</span>
+                </header>
+                <ul class="grid" role="list">
+                    <li class="skill-card">
+                        <span class="skill-icon icon-java" aria-hidden="true">☕</span>
+                        <h4>Java</h4>
+                        <p>Lenguaje principal. POO, colecciones, manejo de excepciones.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-py" aria-hidden="true">🐍</span>
+                        <h4>Python</h4>
+                        <p>Scripts, automatización y pequeños proyectos.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-py" aria-hidden="true">🌐</span>
+                        <h4>HTML5 / CSS3</h4>
+                        <p>Maquetado semántico y estilos modernos.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- BASES DE DATOS -->
+            <section class="expertise" style="padding-top: 1.5rem;" aria-label="Bases de datos">
+                <header class="section-header">
+                    <h3>Bases de Datos</h3>
+                    <span class="tag">Databases</span>
+                </header>
+                <ul class="grid" role="list">
+                    <li class="skill-card">
+                        <span class="skill-icon icon-db" aria-hidden="true">🗄️</span>
+                        <h4>MySQL</h4>
+                        <p>Consultas SQL, relaciones, diseño de esquemas.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-db" aria-hidden="true">🐘</span>
+                        <h4>PostgreSQL</h4>
+                        <p>Base de datos relacional avanzada.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-db" aria-hidden="true">🍃</span>
+                        <h4>MongoDB</h4>
+                        <p>Base de datos NoSQL orientada a documentos.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- DEVOPS -->
+            <section class="expertise" style="padding-top: 1.5rem;" aria-label="DevOps">
+                <header class="section-header">
+                    <h3>DevOps & Cloud</h3>
+                    <span class="tag">Infraestructura</span>
+                </header>
+                <ul class="grid" role="list">
+                    <li class="skill-card">
+                        <span class="skill-icon icon-ops" aria-hidden="true">🐳</span>
+                        <h4>Docker</h4>
+                        <p>Contenedores, imágenes, docker-compose.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-ops" aria-hidden="true">☸️</span>
+                        <h4>Kubernetes</h4>
+                        <p>Orquestación básica de contenedores.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-ops" aria-hidden="true">☁️</span>
+                        <h4>AWS</h4>
+                        <p>EC2, S3 y servicios básicos en la nube.</p>
+                    </li>
+                    <li class="skill-card">
+                        <span class="skill-icon icon-ops" aria-hidden="true">🐧</span>
+                        <h4>Linux</h4>
+                        <p>Administración básica, bash scripting, servidores.</p>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <section>
-            follow me on:
-            <a href="https://twitter.com">Twitter</a> |
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin</a> |
-            <a href="https://github.com">GitHub</a>
+    <footer class="footer">
+        <section class="footer-social" aria-label="Redes sociales">
+            <span>Sígueme en mis redes sociales:</span>
+            <ul class="footer-links" role="list">
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
         </section>
-        <p>
-            &copy; 2026 Angel Erubiel Flores Jimenez - All rights reserved.
-        </p>
+        <p class="footer-copy">&copy; 2026 Angel Erubiel Flores Jimenez — Nadie Lee Esta Parte.</p>
     </footer>
-    <script src="../navbar.js" defer></script>
+
 </body>
 
 </html>

@@ -10,29 +10,19 @@
     }
 }
 
-
-/* ============================
-   TARJETA PRINCIPAL
-   ============================ */
-
 .card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 20px;
     width: 100%;
-    max-width: 700px;     /* ancho máximo de la tarjeta */
-    margin: 0 auto;       /* centra la tarjeta horizontalmente */
+    max-width: 700px;
+    margin: 0 auto;
     padding: 2rem 1.75rem;
     box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.04),
         0 24px 64px rgba(0, 0, 0, 0.6);
     animation: fadeUp 0.6s ease both;
 }
-
-
-/* ============================
-   HEADER — PERFIL
-   ============================ */
 
 .header {
     display: flex;
@@ -44,7 +34,6 @@
     border-bottom: 1px solid var(--border);
 }
 
-/* Anillo de degradado alrededor del avatar */
 .avatar-wrap {
     width: 88px;
     height: 88px;
@@ -53,7 +42,6 @@
     padding: 3px;
 }
 
-/* Imagen de perfil real */
 .avatar-wrap img {
     width: 100%;
     height: 100%;
@@ -63,7 +51,6 @@
     background: var(--card2);
 }
 
-/* Placeholder cuando no hay imagen (muestra iniciales) */
 .avatar-placeholder {
     width: 100%;
     height: 100%;
@@ -78,7 +65,6 @@
     color: var(--accent);
 }
 
-/* Nombre completo */
 .name {
     font-family: 'Syne', sans-serif;
     font-size: 1.35rem;
@@ -86,7 +72,6 @@
     letter-spacing: -0.02em;
 }
 
-/* Rol / cargo en uppercase */
 .role {
     font-size: 0.72rem;
     font-weight: 500;
@@ -95,7 +80,6 @@
     color: var(--accent);
 }
 
-/* Ubicación con ícono SVG */
 .location {
     font-size: 0.8rem;
     color: var(--muted);
@@ -109,10 +93,6 @@
 }
 
 
-/* ============================
-   BOTONES — GITHUB / LINKEDIN
-   ============================ */
-
 .buttons {
     display: flex;
     gap: 0.75rem;
@@ -120,7 +100,6 @@
     width: 100%;
 }
 
-/* Base compartida entre ambos botones */
 .btn {
     flex: 1;
     padding: 0.6rem 0.5rem;
@@ -139,21 +118,19 @@
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-/* Botón oscuro (GitHub) */
 .btn-dark {
     background: var(--card2);
     color: var(--text);
 }
 
 .btn-dark:hover {
-    background: #252d3d;
-    border-color: #58a6ff;
+    background: var(--accent2);
+    border-color: var(--muted);
 }
 
-/* Botón azul (LinkedIn) */
 .btn-blue {
     background: var(--accent);
     color: #fff;
@@ -161,14 +138,9 @@
 }
 
 .btn-blue:hover {
-    background: #388bfd;
-    border-color: #388bfd;
+    background: var(--accent2);
+    border-color: var(--muted);
 }
-
-
-/* ============================
-   SECCIÓN BIO
-   ============================ */
 
 .bio {
     padding: 1.5rem 0 1.25rem;
@@ -189,16 +161,10 @@
     color: #adbac7;
 }
 
-
-/* ============================
-   SECCIÓN EXPERTISE / HABILIDADES
-   ============================ */
-
 .expertise {
     padding-top: 1.25rem;
 }
 
-/* Encabezado con título y etiqueta "Tech Stack" */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -212,7 +178,6 @@
     font-weight: 800;
 }
 
-/* Etiqueta "TECH STACK" */
 .tag {
     font-size: 0.68rem;
     font-weight: 500;
@@ -221,20 +186,14 @@
     color: var(--accent);
 }
 
-/* Grid 2x2 de tarjetas de habilidades */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
-    list-style: none;   /* elimina los puntos del <ul> */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
-
-
-/* ============================
-   TARJETAS DE HABILIDADES
-   ============================ */
 
 .skill-card {
     background: var(--card2);
@@ -246,8 +205,6 @@
     animation: fadeUp 0.6s ease both;
 }
 
-/* Entrada escalonada: cada tarjeta aparece
-   con un ligero retraso para efecto en cascada */
 .skill-card:nth-child(1) { animation-delay: 0.1s; }
 .skill-card:nth-child(2) { animation-delay: 0.2s; }
 .skill-card:nth-child(3) { animation-delay: 0.3s; }
@@ -259,7 +216,6 @@
     box-shadow: 0 8px 24px rgba(47, 129, 247, 0.15);
 }
 
-/* Ícono dentro de cada tarjeta */
 .skill-icon {
     width: 36px;
     height: 36px;
@@ -271,7 +227,6 @@
     margin-bottom: 0.75rem;
 }
 
-/* Colores de fondo por tecnología */
 .icon-java { background: rgba(99,  179, 237, 0.15); }
 .icon-py   { background: rgba(246, 173,  85, 0.15); }
 .icon-db   { background: rgba(72,  187, 120, 0.15); }
@@ -290,11 +245,6 @@
     line-height: 1.4;
 }
 
-
-/* ============================
-   NAVBAR
-   ============================ */
-
 .navbar {
     width: 100%;
     display: flex;
@@ -309,7 +259,6 @@
     margin-bottom: 2rem;
 }
 
-/* Logo / nombre en la navbar */
 .nav-logo {
     font-family: 'Syne', sans-serif;
     font-size: 1.1rem;
@@ -323,7 +272,6 @@
     color: var(--accent);
 }
 
-/* Lista de enlaces */
 .nav-links {
     display: flex;
     gap: 0.25rem;
@@ -347,13 +295,11 @@
     background: var(--card2);
 }
 
-/* Página activa */
 .nav-link.active {
     color: var(--accent);
     background: rgba(47, 129, 247, 0.1);
 }
 
-/* Navbar responsive: colapsa en móvil */
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
@@ -367,11 +313,6 @@
     }
 }
 
-
-/* ============================
-   FOOTER
-   ============================ */
-
 .footer {
     width: 100%;
     display: flex;
@@ -384,7 +325,6 @@
     text-align: center;
 }
 
-/* Fila de redes sociales */
 .footer-social {
     display: flex;
     align-items: center;
@@ -403,7 +343,6 @@
     padding: 0;
 }
 
-/* Separador visual entre links */
 .footer-links li:not(:last-child)::after {
     content: '·';
     margin-left: 0.5rem;
@@ -420,7 +359,6 @@
     color: var(--accent);
 }
 
-/* Copyright */
 .footer-copy {
     font-size: 0.75rem;
     color: var(--border);

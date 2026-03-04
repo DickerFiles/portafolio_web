@@ -1,36 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects — erwbyel</title>
+    <link rel="stylesheet" type="text/css" href="../styles/globals.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <style>
+        /* Project card — extiende .skill-card con más info */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* una columna, más espacio para leer */
+            gap: 0.85rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-card {
+            background: var(--card2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .project-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .project-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .project-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(47, 129, 247, 0.15);
+        }
+
+        /* Encabezado del proyecto: nombre + link */
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* Enlace a GitHub */
+        .project-link {
+            font-size: 0.75rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-link:hover {
+            color: #58a6ff;
+        }
+
+        .project-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Chips de tecnologías usadas */
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .chip {
+            font-size: 0.68rem;
+            font-weight: 500;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            background: rgba(47, 129, 247, 0.12);
+            color: var(--accent);
+            border: 1px solid rgba(47, 129, 247, 0.25);
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Angel Erubiel Flores Jimenez</h1>
-        <p>Ingeniero en Software | estudiante | Java and Devops</p>
-
-        <!-- menu de navegacion principal -->
-        <nav></nav>
-    </header>
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../index.html" class="nav-logo">erwbyel</a>
+        <ul class="nav-links" role="list">
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="./skills.html" class="nav-link">Skills</a></li>
+            <li><a href="./experience.html" class="nav-link">Experience</a></li>
+            <li><a href="./proyects.html" class="nav-link active">Projects</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1>Esta es la pagina de proyectos</h1>
+        <div class="card">
+
+            <section class="bio" aria-label="Proyectos intro">
+                <h2>Proyectos</h2>
+                <p>
+                    Cosas que he construido por curiosidad, para aprender o para resolver problemas reales.
+                    Agrega aquí tus repos reales cuando los tengas listos.
+                </p>
+            </section>
+
+            <section class="expertise" aria-label="Lista de proyectos">
+                <header class="section-header">
+                    <h3>Mis Proyectos</h3>
+                    <span class="tag">Open Source</span>
+                </header>
+
+                <ul class="project-grid" role="list">
+
+                    <li class="project-card">
+                        <div class="project-top">
+                            <span class="project-name">🌐 Portafolio Web</span>
+                            <a href="https://github.com/ERUWIEL" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Este mismo portafolio. HTML, CSS puro con variables CSS, desplegado en nginx dentro
+                            de Docker y automatizado con GitHub Actions en servidor propio.
+                        </p>
+                        <div class="project-tags">
+                            <span class="chip">HTML5</span>
+                            <span class="chip">CSS3</span>
+                            <span class="chip">Docker</span>
+                            <span class="chip">nginx</span>
+                            <span class="chip">GitHub Actions</span>
+                        </div>
+                    </li>
+
+                    <li class="project-card">
+                        <div class="project-top">
+                            <span class="project-name">☕ API REST — Proyecto Java</span>
+                            <a href="https://github.com/ERUWIEL" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Próximamente: API REST construida con Java y Spring Boot.
+                            Agrega el enlace de tu repo cuando lo tengas.
+                        </p>
+                        <div class="project-tags">
+                            <span class="chip">Java</span>
+                            <span class="chip">Spring Boot</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Docker</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <section>
-            follow me on:
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <footer class="footer">
+        <section class="footer-social" aria-label="Redes sociales">
+            <span>Sígueme en mis redes sociales:</span>
+            <ul class="footer-links" role="list">
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
         </section>
-        <p>
-            &copy; 2026 Angel Erubiel Flores Jimenez - All rights reserved.
-        </p>
+        <p class="footer-copy">&copy; 2026 Angel Erubiel Flores Jimenez — Nadie Lee Esta Parte.</p>
     </footer>
+
 </body>
 
 </html>

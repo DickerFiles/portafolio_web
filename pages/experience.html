@@ -1,37 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Experience — erwbyel</title>
+    <link rel="stylesheet" type="text/css" href="../styles/globals.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <style>
+        /* Timeline — estilos propios de esta página */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Cada entrada del timeline es una skill-card
+           con un acento lateral de color */
+        .timeline-item {
+            background: var(--card2);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            /* línea de acento */
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .timeline-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .timeline-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        /* Fila superior: título + fecha */
+        .timeline-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .timeline-date {
+            font-size: 0.72rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .timeline-company {
+            font-size: 0.78rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Angel Erubiel Flores Jimenez</h1>
-        <p>Ingeniero en Software | estudiante | Java and Devops</p>
-
-        <!-- menu de navegacion principal -->
-        <nav></nav>
-    </header>
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../index.html" class="nav-logo">erwbyel</a>
+        <ul class="nav-links" role="list">
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="./skills.html" class="nav-link">Skills</a></li>
+            <li><a href="./experience.html" class="nav-link active">Experience</a></li>
+            <li><a href="./proyects.html" class="nav-link">Projects</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <h1>Pagina de experiencia</h1>
+        <div class="card">
+
+            <section class="bio" aria-label="Experiencia intro">
+                <h2>Experiencia</h2>
+                <p>
+                    Mi trayectoria académica y proyectos personales que me han dado experiencia práctica.
+                    Actualiza esta sección cuando consigas tu primer empleo. 💪
+                </p>
+            </section>
+
+            <section class="expertise" aria-label="Timeline de experiencia">
+                <header class="section-header">
+                    <h3>Trayectoria</h3>
+                    <span class="tag">Timeline</span>
+                </header>
+
+                <ul class="timeline" role="list">
+
+                    <li class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-title">Estudiante de Ingeniería en Software</span>
+                            <span class="timeline-date">2023 — presente</span>
+                        </div>
+                        <p class="timeline-company">Universidad / Instituto Tecnológico</p>
+                        <p class="timeline-desc">
+                            Formación en algoritmos, estructuras de datos, bases de datos, desarrollo web
+                            y fundamentos de sistemas operativos. Proyectos académicos en Java y Python.
+                        </p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-title">Proyecto Personal — Portafolio Web</span>
+                            <span class="timeline-date">2026</span>
+                        </div>
+                        <p class="timeline-company">Proyecto propio</p>
+                        <p class="timeline-desc">
+                            Diseño y desarrollo de este portafolio. Desplegado con Docker y nginx,
+                            automatizado con GitHub Actions CI/CD en servidor propio.
+                        </p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-title">Aprendizaje en DevOps</span>
+                            <span class="timeline-date">2025 — presente</span>
+                        </div>
+                        <p class="timeline-company">Autodidacta</p>
+                        <p class="timeline-desc">
+                            Configuración de servidores Linux, Docker, Cloudflare, Kubernetes básico y AWS.
+                            Mantenimiento de infraestructura propia para proyectos personales.
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <section>
-            follow me on:
-            <a href="https://twitter.com">Twitter</a> |
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin</a> |
-            <a href="https://github.com">GitHub</a>
+    <footer class="footer">
+        <section class="footer-social" aria-label="Redes sociales">
+            <span>Sígueme en mis redes sociales:</span>
+            <ul class="footer-links" role="list">
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
         </section>
-        <p>
-            &copy; 2026 Angel Erubiel Flores Jimenez - All rights reserved.
-        </p>
+        <p class="footer-copy">&copy; 2026 Angel Erubiel Flores Jimenez — Nadie Lee Esta Parte.</p>
     </footer>
-    <script src="../navbar.js" defer></script>
+
 </body>
 
 </html>
