@@ -13,7 +13,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t nginx-portafolio:latest .
+          docker build -t nginx-portfolio:latest .
 
       - name: Clean up old images
         run: |
